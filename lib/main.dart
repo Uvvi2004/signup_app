@@ -141,3 +141,25 @@ class _SignupPageState extends State<SignupPage> {
     );
   }
 }
+
+class WelcomeScreen extends StatelessWidget {
+  final String name;
+
+  const WelcomeScreen({super.key, required this.name});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Welcome Screen'),
+        backgroundColor: Colors.purple,
+      ),
+      body: Center(
+        child: Text(
+          'Welcome, $name!',
+          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+  }
+}
